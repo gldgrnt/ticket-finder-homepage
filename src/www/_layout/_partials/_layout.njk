@@ -9,7 +9,23 @@
 
   <body class="wmnds-body">
     {# Header #}
-    {{ wmndsHeaderV2() }}
+    {% include "_layout/_partials/_nav.njk" %}
+  <div class="wmnds-container">
+    <!-- Phase banner -->
+    <div class="wmnds-banner-container">
+      <div class="wmnds-col-1">
+        <div class="wmnds-banner-container__phase-wrapper">
+          <span class="wmnds-phase-indicator">
+            Alpha
+          </span>
+        </div>
+        <p class="wmnds-banner-container__text">
+          This is a prototype, not everything will work as expected.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
 
     <main class="wmnds-container wmnds-container--main">
       {% block body %} {% endblock body %}
