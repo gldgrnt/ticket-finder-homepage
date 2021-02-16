@@ -1,1 +1,8 @@
 <script src="js/wmnds-website.min.js"></script>
+
+<script>
+$('#data-form input:radio').click(function() {
+    var theURL = $(this).data("url");
+    $('#data-form').attr('action', theURL);
+});
+</script>

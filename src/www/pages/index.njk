@@ -1,13 +1,58 @@
-{% extends "_layout/_sidebar-left.njk" %}
+{% extends "_layout/_sidebar-right.njk" %}
 {# Imports #}
 {% from "components/accordion/_accordion.njk" import wmndsAccordion %}
 
-{% block sidebar %}
-    This is the sidebar
-{% endblock sidebar %}
-
 {% block content %}
-    <h1>This the homepage</h1>
-    <br>
-    <a href="./example-page">Example<a>
+    <h1>Find a ticket</h1>
+    <p>Day, week, month and year tickets for public transport in the West Midlands.</p>
+  <div class="wmnds-grid wmnds-grid--spacing-2-md">
+    <div class="wmnds-col-1-2">
+<div class="wmnds-content-card">
+  <div class="wmnds-p-md">
+    <h2>All-operator<br /><svg style="width:1.5rem;height:1.5rem;" alt="N-">
+<use xlink:href="#wmnds-general-n-ticket" href="#wmnds-general-n-ticket"></use>
+</svg> tickets</h2>
+<svg style="width:2rem;height:2rem;" class="" alt="Bus">
+<use xlink:href="#wmnds-modes-isolated-bus" href="#wmnds-modes-isolated-bus" style="fill:#ea0029;"></use></svg><svg style="width:2rem;height:2rem;" class="" alt="Train">
+<use xlink:href="#wmnds-modes-isolated-rail" href="#wmnds-modes-isolated-rail" style="fill:#e07709;"></use></svg><svg style="width:2rem;height:2rem;" class="" alt="Tram">
+<use xlink:href="#wmnds-modes-isolated-metro" href="#wmnds-modes-isolated-metro" style="fill:#0075c9"></use></svg>
+<br />
+<br />
+    <ul>
+        <li>Take any bus, train or tram</li>
+        <li>Choose which modes of transport you want included on your ticket</li>
+    </ul>
+    <br />
+    <button class="wmnds-btn wmnds-col-1" type="button" aria-label="Find an all-operator N-ticket">
+  Find a ticket
+</button>
+  </div>
+</div>
+  </div>
+  <div class="wmnds-col-1-2">
+<div class="wmnds-content-card">
+  <div class="wmnds-p-md">
+    <h2>Single operator tickets</h2>
+    <svg style="width:2rem;height:2rem;" alt="Bus">
+<use xlink:href="#wmnds-modes-isolated-bus" href="#wmnds-modes-isolated-bus" style="fill:#ea0029;"></use></svg><svg style="width:2rem;height:2rem;" class="" alt="Tram">
+<use xlink:href="#wmnds-modes-isolated-metro" href="#wmnds-modes-isolated-metro" style="fill:#0075c9"></use></svg>
+<br />
+<br />
+    <ul>
+        <li>Take specific buses or any tram</li>
+        <li>Better value if you only travel using buses run by one operator</li>
+    </ul>
+    <br />
+        <button class="wmnds-btn wmnds-col-1" type="button" aria-label="Find a single operator ticket">
+  Find a ticket
+</button>
+  </div>
+</div>
+  </div>
+  </div>
+  <h2>Other tickets</h2>
+    <p>You can find single and return fares when you <a href="#" class="wmnds-link">plan a journey</a>.</p>
+    <p>You can also pay for buses and trams with <a href="#" class="wmnds-link">Swift Go</a> or a <a href="#" class="wmnds-link">pay as you go Swift card</a>.</p>
 {% endblock content %}
+{% block sidebar %}
+{% endblock sidebar %}
